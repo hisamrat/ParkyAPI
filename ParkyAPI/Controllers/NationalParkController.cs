@@ -11,7 +11,9 @@ using System.Threading.Tasks;
 
 namespace ParkyAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/nationalparks")]
+    //[Route("api/[controller]")]
+    //[ApiExplorerSettings(GroupName = "ParkyOpenAPISpecNP")]
     [ApiController]
     public class NationalParkController : ControllerBase
     {
@@ -100,7 +102,9 @@ namespace ParkyAPI.Controllers
                 ModelState.AddModelError("", $"sometion went wrong saving record{nationparobj.Name}");
                 return StatusCode(500, ModelState);
             }
-            return CreatedAtRoute("GetNationalPark",new { nationalParkId =nationparobj.Id},nationparobj);
+            return CreatedAtRoute("GetNationalPark",new {
+                version=HttpContext.GetRequestedApiVersion().ToString(),
+                nationalParkId =nationparobj.Id},nationparobj);
 
         }
 
