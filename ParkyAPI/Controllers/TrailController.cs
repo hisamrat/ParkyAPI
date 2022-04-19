@@ -73,7 +73,7 @@ namespace ParkyAPI.Controllers
         /// <summary>
         /// Get individual trail
         /// </summary>
-        /// <param name="trailId">The id of the trail</param>
+        /// <param name="nationnalParkId">The id of the trail</param>
         /// <returns></returns>
         [HttpGet("[action]/{nationnalParkId:int}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(TrailDtos))]

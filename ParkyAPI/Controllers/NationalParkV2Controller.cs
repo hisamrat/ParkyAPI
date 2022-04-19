@@ -18,7 +18,9 @@ namespace ParkyAPI.Controllers
     public class NationalParkV2Controller : ControllerBase
     {
         private readonly INationalParkRepository _nationalParkRepository;
+#pragma warning disable IDE0052 // Remove unread private members
         private readonly IMapper _mapper;
+#pragma warning restore IDE0052 // Remove unread private members
 
         public NationalParkV2Controller(INationalParkRepository nationalParkRepository,IMapper mapper)
         {

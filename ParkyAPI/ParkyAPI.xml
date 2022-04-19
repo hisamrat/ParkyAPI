@@ -40,7 +40,7 @@
             <summary>
             Get individual trail
             </summary>
-            <param name="trailId">The id of the trail</param>
+            <param name="nationnalParkId">The id of the trail</param>
             <returns></returns>
         </member>
     </members>
