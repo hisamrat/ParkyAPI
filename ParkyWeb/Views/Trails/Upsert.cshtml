@@ -15,7 +15,7 @@
             <h2 class="text-primary">@title</h2>
         </div>
         <div class="col-8">
-            <div class="form-group row">
+            <div class="form-group row p-2">
                 <div class="col-4">
                     NationalPark
                 </div>
@@ -25,7 +25,7 @@
                     <span asp-validation-for="Trail.NationalParkId" class="text-danger"></span>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row p-2">
                 <div class="col-4">
                     <label asp-for="Trail.Name"></label>
                 </div>
@@ -34,7 +34,7 @@
                     <span asp-validation-for="Trail.Name" class="text-danger"></span>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row p-2">
                 <div class="col-4">
                     <label asp-for="Trail.Difficulty"></label>
                 </div>
@@ -44,7 +44,7 @@
                             " class="form-control"></select>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row p-2">
                 <div class="col-4">
                     <label asp-for="Trail.Distance"></label>
                 </div>
@@ -53,7 +53,7 @@
                     <span asp-validation-for="Trail.Distance" class="text-danger"></span>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row p-2">
                 <div class="col-4">
                     <label asp-for="Trail.Elevation"></label>
                 </div>
@@ -63,7 +63,7 @@
                 </div>
             </div>
             
-            <div class="form-group row">
+            <div class="form-group row p-2">
                 <div class="col-4 offset-4">
                     <button type="submit" class="btn btn-primary form-control">
                         @(Model.Trail.Id!=0?"Update":"Create")
