@@ -13,14 +13,16 @@ namespace ParkyWeb.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        //private readonly ILogger<HomeController> _logger;
         private readonly INationalParkRepository _nationalParkRepository;
         private readonly ITrailRepository _trailRepository;
 
+#pragma warning disable IDE0060 // Remove unused parameter
         public HomeController(ILogger<HomeController> logger,INationalParkRepository nationalParkRepository,
+#pragma warning restore IDE0060 // Remove unused parameter
             ITrailRepository trailRepository)
         {
-            _logger = logger;
+           // _logger = logger;
            _nationalParkRepository = nationalParkRepository;
             _trailRepository = trailRepository;
         }
