@@ -104,6 +104,7 @@ namespace ParkyAPI.Controllers
                 ModelState.AddModelError("", $"sometion went wrong saving record{nationparobj.Name}");
                 return StatusCode(500, ModelState);
             }
+            //return Ok();
             return CreatedAtRoute("GetNationalPark",new {
                 version=HttpContext.GetRequestedApiVersion().ToString(),
                 nationalParkId =nationparobj.Id},nationparobj);
